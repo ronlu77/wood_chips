@@ -15,14 +15,16 @@ body {
     right: 0;
     margin: auto;
     width: 24rem;
-    height: 28rem;
+    height: 26rem;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
 
 .container h1 {
-    height: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 22px 0;
 }
 
 .container a {
@@ -31,7 +33,7 @@ body {
 }
 
 .container form {
-    height: 24rem;
+    height: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,14 +41,14 @@ body {
 }
 
 .container p {
-    white-space: nowrap;
+    width: 80%;
+    margin-left: 6px;
 }
 
 
 .form-control {
     position: relative;
     width: 80%;
-    height: 2.5rem;
 }
 
 .form-control input {
@@ -56,6 +58,8 @@ body {
     width: 100%;
     font-size: 1rem;
     border-bottom: 2px solid #fff;
+    color: #fff;
+    padding: 10px 0;
 }
 
 .form-control input:focus,
@@ -66,9 +70,22 @@ body {
 
 .form-control label {
     position: absolute;
-    top: -15px;
+    top: 15px;
     left: 0;
     pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
 }
 
 button {
@@ -82,10 +99,6 @@ button {
     font-weight: bold;
     font-family: inherit;
     cursor: pointer;
-}
-
-button:focus {
-    outline: 0;
 }
 
 button:active {
