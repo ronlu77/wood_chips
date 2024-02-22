@@ -1,0 +1,101 @@
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+#wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#wrapper .steps{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    overflow: hidden;
+}
+
+.steps-coninter::before{
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+#wrapper .steps .steps-coninter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#wrapper .steps-coninter .steps-item{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: var(--line-border-empty);
+    background-color: #fff;
+    border: 3px solid var(--line-border-empty);
+    text-align: center;
+    font-size: 22px;
+    transition: 0.4 ease;
+}
+
+#wrapper #progress{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0%;
+    height: 4px;
+    background-color: var(--line-border-fill);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+#wrapper .btn-wrapper{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin-top: 20px;
+}
+#wrapper .btn{
+    width: 80px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: var(--line-border-fill);
+    color:#fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+#wrapper #btn-next{
+    background-color: var(--line-border-fill);
+}
+
+#wrapper .steps .steps-coninter .active{
+    border-color:  var(--line-border-fill);
+}
+
+/* 伪元素 */
+.btn:disabled{
+    background-color: var(--line-border-empty) !important;
+    cursor: not-allowed !important;
+}

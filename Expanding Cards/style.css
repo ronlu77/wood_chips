@@ -1,0 +1,62 @@
+* {
+    /* 指定高宽包括外边距内边距边框以及内容区的和盒模型 */
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 90vw;
+}
+
+#wrapper > .cards-continer {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+}
+
+#wrapper .cards-continer h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    margin: 0;
+    opacity: 0;
+}
+
+#wrapper .active {
+    flex: 5;
+}
+
+#wrapper .cards-continer.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width :480px) {
+    #wrapper {
+        width: 100vw;
+    }
+}
