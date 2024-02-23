@@ -1,0 +1,30 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #A164DF;
+}
+
+.container {
+    width: 80%;
+    text-align: center;
+}
+
+.btn-sound-item {
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background: rebeccapurple;
+    text-align: center;
+    padding: 20px 30px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.btn-sound-item:active {
+    transform: scale(0.98);
+}
