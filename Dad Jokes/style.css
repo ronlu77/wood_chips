@@ -1,0 +1,49 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #686DE0;
+    text-align: center;
+}
+
+
+.container {
+    width: 40%;
+    min-width: 600px;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #7F7F7F;
+    margin: 20px 0;
+}
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 200px;
+    height: 40px;
+    background: #9F68E0;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 14px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.joke {
+    font-size: 26px;
+    margin: 0 50px;
+    padding: 40px 20px;
+}
